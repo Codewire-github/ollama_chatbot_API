@@ -74,17 +74,11 @@ You can send a POST request to /chat/llama3 with a JSON body containing the mode
 Installing Ollama and Llama3 Model
 ----------------------------------
 
-### Installing Ollama
+### Installing Ollama and Llama3 model
 
-1.  **Clone the Repository**: Clone the [!Ollama](https://github.com/ollama/ollama) repository from the source.
+1.  **Download Ollama**: Download the [Ollama](https://github.com/ollama/ollama) from the repository from the source.
     
 2.  **Setup Environment**: Follow the setup instructions provided in the repository's README to set up Ollama.
     
 
-### Installing Llama3 Model
 
-1.  **Clone Llama3 Repository**: Clone the Llama3 model repository from the source.
-    
-2.  **Install Dependencies**: Install necessary dependencies as per the model's README instructions.
-    
-3.  **Model Initialization**: Initialize and configure Llama3 as required by your application.
