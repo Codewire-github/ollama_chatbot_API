@@ -76,7 +76,7 @@ Installing Ollama and Llama3 Model
 
 ### Installing Ollama
 
-1.  **Clone the Repository**: Clone the Ollama repository from the source.
+1.  **Clone the Repository**: Clone the [!Ollama](https://github.com/ollama/ollama) repository from the source.
     
 2.  **Setup Environment**: Follow the setup instructions provided in the repository's README to set up Ollama.
     
