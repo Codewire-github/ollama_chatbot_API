@@ -7,7 +7,7 @@ Installation
 ------------
 
 ### Installing Dependencies
-    ```bash
+    
     pip install fastapi  
     pip install requests  
     pip install uvicorn 
@@ -34,14 +34,14 @@ API Endpoints
     
 
 #### Request Body (Item model):
-    ```json
+    
     {
     "model": "llama3",
     "prompt": "Your prompt text here"
     }
 
 #### Response:
-    ```json
+    
     {
     "data": { 
         "response": "Response from the Llama3 model"
@@ -64,7 +64,7 @@ You can send a POST request to /chat/llama3 with a JSON body containing the mode
        curl -X 'POST' \    'http://localhost:8000/chat/llama3' \    -H 'Content-Type: application/json' \    -d '{    "model": "llama3",    "prompt": "Tell me about Nepal"  }'
 
 ### Response Example
-    ```json
+    
     {    
         "data": {
             "response": "Nepal is a beautiful country located in South Asia, with a rich culture and history..."    
