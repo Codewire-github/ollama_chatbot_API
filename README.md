@@ -7,14 +7,16 @@ Installation
 ------------
 
 ### Installing Dependencies
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   pip install fastapi  pip install requests  pip install uvicorn   `
+    ```bash
+    pip install fastapi  
+    pip install requests  
+    pip install uvicorn 
 
 ### Running the FastAPI Application
 
 To run the FastAPI application locally:
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   uvicorn main:app --reload   `
+    uvicorn main:app --reload
 
 This command starts the FastAPI application on http://localhost:8000 by default.
 
@@ -32,12 +34,20 @@ API Endpoints
     
 
 #### Request Body (Item model):
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   {    "model": "llama3",    "prompt": "Your prompt text here"  }   `
+    ```json
+    {
+    "model": "llama3",
+    "prompt": "Your prompt text here"
+    }
 
 #### Response:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   {    "data": {      "response": "Response from the Llama3 model"    },    "llms_name": "llama3"  }   `
+    ```json
+    {
+    "data": { 
+        "response": "Response from the Llama3 model"
+        },
+    "llms_name": "llama3"  
+    }
 
 ### CORS Configuration
 
@@ -50,12 +60,16 @@ Usage Example
 ### Sending a Request
 
 You can send a POST request to /chat/llama3 with a JSON body containing the model and prompt:
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   curl -X 'POST' \    'http://localhost:8000/chat/llama3' \    -H 'Content-Type: application/json' \    -d '{    "model": "llama3",    "prompt": "Tell me about Nepal"  }'   `
+       
+       curl -X 'POST' \    'http://localhost:8000/chat/llama3' \    -H 'Content-Type: application/json' \    -d '{    "model": "llama3",    "prompt": "Tell me about Nepal"  }'
 
 ### Response Example
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   {    "data": {      "response": "Nepal is a beautiful country located in South Asia, with a rich culture and history..."    },    "llms_name": "llama3"  }   `
+    ```json
+    {    
+        "data": {
+            "response": "Nepal is a beautiful country located in South Asia, with a rich culture and history..."    
+            },   
+        "llms_name": "llama3"  } 
 
 Installing Ollama and Llama3 Model
 ----------------------------------
