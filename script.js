@@ -13,7 +13,7 @@ chatForm.addEventListener("submit", async (event) => {
 
   const data = {
     model: "llama3",
-    prompt: userInput.value,
+    prompt: `Give answer in html format for heading, bold, list and all, dont include ** for given prompt: ${userInput.value}`,
   };
 
   try {
